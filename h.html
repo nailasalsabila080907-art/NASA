@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanah Transport Indo</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #413ac0, rgb(141, 225, 132));
+      color: #333;
+    }
+
+    header {
+      background:  linear-gradient(to right, #413ac0, rgb(141, 225, 132));
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .kotak{
+    height: 50px;
+    width: 100%;
+    background: linear-gradient( to left, rgb(141, 225, 132), #413ac0);
+}
+
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: white;
+    font-size: 14px;
+    justify-content: flex-end;   
+    align-items: center;
+    padding-right: 30px;          
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu li a {
+    display: block;
+    padding: 12px 16px;  
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.2px;  
+    position: relative;
+    margin: 0 2px; 
+}
+
+.menu li a:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.desk {
+      background: url(2.jpeg) center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 110px 20px;
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+    }
+    .desk h2 {
+      font-size: 36px;
+      font-weight: 700;
+    }
+    .desk p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    .desk button {
+      margin-top: 20px;
+      background: #ffb703;
+      color: #000;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .desk button:hover {
+      background: #f5a001;
+    }
+
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .vehicle-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .vehicle-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .vehicles {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .vehicle-card {
+      background: white;
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+
+    .vehicle-card:hover { transform: translateY(-5px); }
+
+    .vehicle-card img {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .vehicle-card h3 { margin: 10px 0 5px; }
+    .vehicle-card p { color: #666; }
+
+    .form-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    label { display: block; margin-bottom: 5px; font-weight: 600; }
+
+    h2{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover { background-color: #0056b3; }
+
+    .total { font-size: 1.2rem; font-weight: 600; margin-top: 10px; color: #333; }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #222;
+      color: #ddd;
+      margin-top: 50px;
+    }
+
+    /* ===== MODAL ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .modal-content h3 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .modal-content p {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .modal-content button {
+      margin: 5px;
+      width: 45%;
+    }
+
+    .confirm {
+      background: #28a745;
+    }
+
+    .confirm:hover {
+      background: #218838;
+    }
+
+    .cancel {
+      background: #dc3545;
+    }
+
+    .cancel:hover {
+      background: #b52a36;
+    }
+
+    .kotak3{
+      background: white;
+      margin: 50px;
+      padding: 20px;
+      border-radius: 6px;
+      font-style: "times new roman";
+      text-align: center;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+ 
+   <div class="kotak">
+        <ul class="menu">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#kendaraan">Kendaraan</a></li>
+            <li><a href="#pesan">Pesan</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#contact">Kontak</a></li>
+           
+           
+    </div>
+
+     <br>
+
+     <section id="home" class="desk">
+    <h2>Sewa Transportasi Mudah & Cepat</h2>
+    <p>Pilih kendaraan terbaik untuk perjalanan Anda – harga terjangkau, pelayanan maksimal.</p>
+    <button onclick="document.getElementById('pesan').scrollIntoView({behavior:'smooth'})">Pesan Sekarang</button>
+  </section>
+
+  <section id="kendaraan">
+  <section class="vehicle-section">
+    <h2>Pilihan Kendaraan Kami</h2>
+    <div class="vehicles">
+       <div class="vehicle-card">
+        <img src="ri.jpeg" alt="brio">
+        <h3>Honda Brio</h3>
+        <p>Rp 300.000 / hari</p>
+      </div>
+       <div class="vehicle-card">
+        <img src="nza1.jpeg" alt="Avanza">
+        <h3>Toyota Avanza</h3>
+        <p>Rp 350.000 / hari</p>
+      </div>
+      <div class="vehicle-card">
+        <img src="rbn.jpeg"  alt="Innova">
+        <h3>Toyota Innova Reborn</h3>
+        <p>Rp 450.000 / hari</p>
+      </div>
+      <div class="vehicle-card">
+        <img src="fr.jpeg" alt="Fortuner">
+        <h3>Toyota Fortuner</h3>
+        <p>Rp 600.000 / hari</p>
+      </div>
+      <div class="vehicle-card">
+        <img src="alp.jpeg"  alt="AlPhard">
+        <h3>Toyota Alphard</h3>
+        <p>Rp 1.200.000 / hari</p>
+      </div>
+       <div class="vehicle-card">
+        <img src="vell.jpeg"  alt="vellfire">
+        <h3>Toyota Vellfire</h3>
+        <p>Rp 1.150.000 / hari</p>
+      </div>
+       <div class="vehicle-card">
+        <img src="p.jpeg"  alt="l300" >
+        <h3>Pickup / L 300</h3>
+        <p>Rp 450.000 / hari</p>
+      </div>
+      <div class="vehicle-card">
+        <img src="hic.jpeg"  alt="hiace">
+        <h3>Toyota Hiace Mini Bus</h3>
+        <p>Rp 800.000 / hari</p>
+      </div>
+       
+       <div class="vehicle-card">
+        <img src="bus.jpeg"  alt="bus">
+        <h3>Bus Pariwisata 35 Kursi Medium Bus</h3>
+        <p>Rp 3.000.000 / hari</p>
+      </div>
+       <div class="vehicle-card">
+        <img src="bb.jpeg"  alt="bus">
+        <h3>Bus Pariwisata 50 Kursi Big Bus</h3>
+        <p>Rp 3.600.000 / hari</p>
+      </div>
+       <div class="vehicle-card"> 
+        <img src="mtr.jpeg"  alt="motor">
+        <h3>Motor</h3>
+        <p>Rp 150.000 / hari</p>
+      </div></div>
+     
+    </div>
+  </section>
+  </section>
+
+  <section id="pesan">
+  <div class="form-container">
+    <h2>Pesan Sekarang</h2>
+
+   <label>Nama Lengkap:</label>
+      <input type="text" id="nama" required>
+
+      <label>No. Telepon:</label>
+      <input type="tel" id="telepon" required>
+
+    <label for="tipe">Pilih Tipe Mobil:</label>
+    <select id="tipe">
+      <option value="#"> --- Pilih ---</option>
+      <option value="150000">Motor - Rp 150.000/hari</option>
+      <option value="350000">Avanza - Rp 350.000/hari</option>
+      <option value="300000">Brio - Rp 300.000/hari</option>
+      <option value="450000">Innova - Rp 450.000/hari</option>
+      <option value="450000">Pickup / L 300 - Rp 450.000/hari</option>
+      <option value="600000">Fortuner - Rp 600.000/hari</option>
+      <option value="800000">Hiace - Rp 800.000/hari</option>
+      <option value="1200000">Alphard - Rp 1.200.000/hari</option>
+      <option value="1150000">Vellfire - Rp 1.150.000/hari</option>
+      <option value="3000000">Bus Pariwisata - Rp 3.000.000/hari</option>
+      <option value="3600000">Big Bus - Rp 3.600.000/hari</option>
+    </select>
+
+    <label for="tglAmbil">Tanggal Pengambilan:</label>
+    <input type="date" id="tglAmbil">
+
+    <label for="tglKembali">Tanggal Pengembalian:</label>
+    <input type="date" id="tglKembali">
+
+    <button onclick="hitungTotal()">Pesan Sekarang</button>
+    <div class="total" id="hasil"></div>
+  </div>
+  </section>
+
+  <!-- ===== POPUP KONFIRMASI ===== -->
+  <div class="modal" id="modalKonfirmasi">
+    <div class="modal-content">
+      <h3>Konfirmasi Pesanan</h3>
+      <p id="detailPesanan"></p>
+      <button class="confirm" onclick="konfirmasiPesanan()">Konfirmasi</button>
+      <button class="cancel" onclick="tutupModal()">Batal</button>
+    </div>
+  </div>
+
+  <section id ="about">
+    <div class="kotak3">
+    <h2>Tentang Kami</h2>
+    <p>PT. Amanah Transportindo merupakan perusahaan yang bergerak di bidang jasa penyewaan kendaraan, 
+      melayani kebutuhan transportasi individu maupun korporasi. Kami menyediakan berbagai jenis kendaraan,
+       mulai dari mobil penumpang, kendaraan operasional, hingga bus pariwisata, yang seluruhnya terawat dengan baik dan dalam kondisi optimal.  
+        Dengan didukung oleh tim profesional dan layanan pelanggan yang responsif, PT. Amanah Transportindo berkomitmen untuk memberikan 
+        layanan transportasi yang aman, nyaman, dan tepat waktu. Kami senantiasa mengedepankan kualitas pelayanan dan kepuasan pelanggan
+         dalam setiap perjalanan.</p>
+  </section>
+
+  <section id="contact">
+  <footer>
+    <p><strong>Alamat:</strong> Jl. Kartini, Pekanbaru</p>
+      <p><strong>Telp:</strong> 0812‑1945‑0817</p>
+      <p><strong>Email:</strong>info@amanahtransport.co.id</a></p>
+      <p><strong>Jam:</strong> Senin–Jumat, 08:00–17:00</p>
+      <p class="social">
+        <a href="#">Facebook</a> • <a href="#">Instagram</a> • <a href="#">WhatsApp</a>
+    <p>© 2025 Amanah Transport Indo. </p>
+  </footer>
+  </section>
+
+  <script>
+    let total = 0;
+    let detail = "";
+
+    function hitungTotal() {
+      const tglAmbil = new Date(document.getElementById('tglAmbil').value);
+      const tglKembali = new Date(document.getElementById('tglKembali').value);
+      const hargaPerHari = parseInt(document.getElementById('tipe').value);
+      const tipeMobil = document.getElementById('tipe').options[document.getElementById('tipe').selectedIndex].text.split(" - ")[0];
+
+      if (!tglAmbil || !tglKembali || isNaN(hargaPerHari)) {
+        alert("Mohon lengkapi semua data.");
+        return;
+      }
+
+      const selisihHari = (tglKembali - tglAmbil) / (1000 * 60 * 60 * 24);
+
+      if (selisihHari <= 0) {
+        alert("Tanggal pengembalian harus setelah tanggal pengambilan!");
+        return;
+      }
+
+      total = hargaPerHari * selisihHari;
+      detail = `Mobil: <b>${tipeMobil}</b><br>Lama sewa: ${selisihHari} hari<br>Total: <b>Rp ${total.toLocaleString('id-ID')}</b>`;
+      document.getElementById('hasil').innerHTML = detail;
+
+      // tampilkan modal
+      document.getElementById('detailPesanan').innerHTML = detail;
+      document.getElementById('modalKonfirmasi').style.display = 'flex';
+    }
+
+    function tutupModal() {
+      document.getElementById('modalKonfirmasi').style.display = 'none';
+    }
+
+    function konfirmasiPesanan() {
+      alert("✅ Pesanan Anda berhasil dikonfirmasi!\nTerima kasih telah menyewa di Rental Transportasi Nusantara.");
+      tutupModal();
+      document.getElementById('hasil').innerHTML = "";
+      document.getElementById('tglAmbil').value = "";
+      document.getElementById('tglKembali').value = "";
+    }
+  </script>
+
+  
+
+</body>
+</html>
