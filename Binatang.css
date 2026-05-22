@@ -1,0 +1,112 @@
+*,
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(237, 235, 104) ;
+}
+
+.kotak{
+    height: 50px;
+    width: 100%;
+    background-color: #f33b3b ;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: white;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 14px 30px ;
+    text-decoration: none;
+    color: rgb(243, 240, 107);
+    transition: background 0.3s;
+    font-style: "times new Roman";
+}
+
+.menu li a:hover {
+    background-color: rgb(238, 4, 4);
+    transition: .5s ease-in-out;
+    transition-delay: .1s;
+    border-radius: 10px;
+}
+
+.kotak3 {
+    height: 500px;
+    width: 90%;
+    margin: auto;
+    background-color: #d5de39; 
+}
+
+.container{ /*templete*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 20px; /* jarak antar kotak */
+    max-width: 900px;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    padding: 20px 10px;
+}
+
+.card{
+    background-color: rgb(237, 235, 104);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transfrom 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card img{
+    width: 100px;
+    height: 150px; 
+    object-fit: cover;
+    padding: 10px 10px;
+}
+
+.card p{
+    text-align: center;
+    font-style: "times new roman";
+}
+
+.card h2{
+    padding: 15px;
+    font-size: 20px; 
+    background-color: #f33b3b;
+    color: rgb(243, 240, 107);
+    font-family: "Rimes New Roman";
+}
+
+.br li{
+    text-align: center;
+}
+
+.footer{
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #f33b3b;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 10px;
+    border-radius: 10px;
+}

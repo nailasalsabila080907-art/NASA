@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menghitung Cepat</title>
+  <link rel="stylesheet" href="H.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Menghitung Cepat</h1>
+
+
+    <label for="pilihMateri">Pilih Materi</label>
+    <select id="pilihMateri" onchange="tampilForm()">
+      <option value="">-- Pilih --</option>
+      <option value="dolar">Kurs Dolar</option>
+      <option value="apel">Sisa Bagi Apel</option>
+      <option value="nilai">Rata-Rata Nilai</option>
+      <option value="perjalanan">Kecepatan</option>
+      <option value="baju">Harga Diskon</option>
+      <option value="tiketKonser">Tiket Konser</option>
+      <option value="hotel">Hitung Harga Hotel Staycation</option>
+    </select>
+
+    <section id="formInput">
+      <div id="formIsi">📌 Pilih materi untuk menampilkan form.</div>
+      <div id="previewHasil">🔍 Preview hasil akan tampil di sini</div>
+    </section>
+
+    <div id="hasil">✅ Hasil akhir muncul di sini.</div>
+  </main>
+
+  <!-- Link JavaScript -->
+  <script src="cv.js"></script>
+</body>
+</html>
