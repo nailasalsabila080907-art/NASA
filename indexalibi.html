@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menghindari Rintangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1> Game Menghindari Rintangan</h1>
+            <div class="stats">
+                <div class="stat-item">Skor: <span id="score">0</span></div>
+                <div class="stat-item">Nyawa: <span id="lives">3</span></div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div id="startScreen" class="gameScreen">
+            <div class="screenContent">
+                <h2> GAME MENGHINDARI RINTANGAN</h2>
+                <p class="description">Hindari rintangan merah dan kumpulkan koin emas!</p>
+                
+                <div class="gameInfo">
+                    <div class="info-item">
+                        <span class="icon">⬆️⬇️</span>
+                        <p>Gunakan tombol Atas/Bawah untuk bergerak</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">❌</span>
+                        <p>Hindari rintangan kotak </p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">💰</span>
+                        <p>Kumpulkan koin emas untuk mendapatkan bonus poin</p>
+                    </div>
+                </div>
+                
+                <button onclick="startGame()" class="startButton">MULAI GAME</button>
+            </div>
+        </div>
+        
+        <div id="gameOverScreen" class="gameScreen hidden">
+            <div class="screenContent">
+                <h2>GAME OVER!</h2>
+                <p id="finalScore">Skor Akhir: 0</p>
+                <button onclick="location.reload()">Main Lagi</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
