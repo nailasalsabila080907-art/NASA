@@ -6,6 +6,7 @@
         let lives = 3.0;
         let gameRunning = true;
         function startGame() {
+            document.getElementById("bgMusic").play();
             document.getElementById('startScreen').classList.add('hidden');
             canvas.style.display = 'block';
             gameStarted = true;
